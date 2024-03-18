@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { Component } from '@angular/core'
+import { RouterModule } from '@angular/router'
+import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatButtonModule } from '@angular/material/button'
+import { MatIconModule } from '@angular/material/icon'
 
 @Component({
   selector: 'carebox-home-page',
@@ -12,5 +12,5 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
-  isChecked = true;
+  isChecked = true
 }
