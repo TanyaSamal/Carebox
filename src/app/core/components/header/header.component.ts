@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon'
-import { type DomSanitizer } from '@angular/platform-browser'
+import { DomSanitizer } from '@angular/platform-browser'
 import { HttpClientModule } from '@angular/common/http'
 
 @Component({

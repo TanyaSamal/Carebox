@@ -18,19 +18,10 @@ module.exports = {
         }
     ],
     project: ['./tsconfig.json'],
-    parser: '@typescript-eslint/parser',
     parserOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
     rules: {
-    },
-    settings: {
-        'import/resolver': {
-            node: {
-            paths: ['src'],
-            extensions: ['.js', '.ts', '.mjs'],
-            },
-        },
     },
 }
