@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "./styles/theme" as theme;
+@use "./styles/typography" as typography;
+
+@import "./styles/layout.scss";
+@import "./styles/material.scss";
+@import  "./styles/constants.scss";
+
+@include mat.core();
+@include mat.core-theme(theme.$carebox-theme);
+@include mat.all-component-themes(theme.$carebox-theme);
+@include mat.typography-hierarchy(typography.$carebox-mobile-typography);
+
+@media screen and (min-width: ($mq-mobile + 1)) {
+  @include mat.typography-hierarchy(typography.$carebox-typography);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,12 @@
+@use "sass:map";
+@import  "./constants.scss";
+
+.mdc-form-field .mdc-label {
+  font-size: $captionText;
+  padding-left: 12px;
+}
+
+.mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background, .mdc-checkbox__ripple {
+  background-color: map.get($themeColors, "headingColor")!important;
+  border-color: map.get($themeColors, "headingColor")!important;
+}

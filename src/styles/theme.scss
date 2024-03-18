@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "./typography" as typography;
+
+$primary-text: #3c4242;
+$contrast-text: #fff;
+
+$carebox-primary-palette: (
+  50: #f3f4f4,
+  100: #f5b9d2,
+  200: #f08cb4,
+  300: #eb5d96,
+  400: #e7387e,
+  500: #e50067,
+  600: #d30164,
+  700: #bd025e,
+  800: #830051,
+  900: #013865,
+  contrast: (
+    50: #1b1b1b,
+    100: $primary-text,
+    200: $primary-text,
+    300: $primary-text,
+    400: #3f4444,
+    500: $contrast-text,
+    600: $contrast-text,
+    700: $contrast-text,
+    800: $contrast-text,
+    900: #9EB0AC,
+  )
+);
+
+$carebox-primary: mat.define-palette($carebox-primary-palette);
+$carebox-accent: mat.define-palette($carebox-primary-palette, 800);
+$carebox-warn: mat.define-palette(mat.$red-palette);
+
+$carebox-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $carebox-primary,
+      accent: $carebox-accent,
+      warn: $carebox-warn,
+    ),
+    typography: typography.$carebox-mobile-typography,
+  )
+);

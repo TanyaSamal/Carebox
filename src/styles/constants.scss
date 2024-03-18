@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use "./theme" as theme;
+
+$color-config: mat.get-color-config(theme.$carebox-theme);
+$typography-config: mat.get-typography-config(theme.$carebox-theme);
+$primary-palette: map.get($color-config, 'primary');
+
+
+$themeColors: (
+  "headingColor": mat.get-color-from-palette($primary-palette, 900),
+  "bodyColor": mat.get-contrast-color-from-palette($primary-palette, 100),
+  "buttonBgColor": mat.get-color-from-palette($primary-palette, 800),
+  "buttonTextColor": mat.get-contrast-color-from-palette($primary-palette, 800),
+  "lightBg": mat.get-contrast-color-from-palette($primary-palette, 800),
+  "darkBg": mat.get-contrast-color-from-palette($primary-palette, 50),
+  "pageBg": mat.get-color-from-palette($primary-palette, 50),
+  "lineColor": mat.get-contrast-color-from-palette($primary-palette, 900),
+);
+
+$captionText: mat.font-size($typography-config, caption);
+
+$contentWidth: 1239px;
+
+$mq-laptop: 1440px;
+$mq-mobile: 767px;

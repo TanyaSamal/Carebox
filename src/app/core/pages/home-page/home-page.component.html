@@ -1,0 +1,53 @@
+<section class="promo-container">
+  <div class="row promo-container__row flex-start-center">
+    <div class="promo-container__content">
+      <h1 class="mat-headline-1">
+        Would you like to conduct clinical trials with Carebox?
+      </h1>
+      <img src="../../../../assets/image-min.jpg" alt="Carebox promo image" />
+      <p>
+        To strengthen and expand our clinical research, Carebox is currently
+        looking for partners to conduct Phase 1 - 4 clinical trials in various
+        indications. We are looking for Healthcare Professionals with all levels
+        of experience either with an established clinical research centre or
+        interested in setting up a clinical research centre. In addition, we are
+        looking for Healthcare Professionals who wish to refer patients to a
+        clinical trial site.
+      </p>
+      <p>
+        If you are interested in becoming an investigator within an Carebox
+        sponsored clinical trial or have an interest in referring patients to
+        one of Carebox’s trial sites, please fill out the questionnaire below.
+        It will only take a few minutes.
+      </p>
+      <p>We will review your answers and respond to you shortly.</p>
+      <p>AstraZeneca Site Development Task Force</p>
+    </div>
+  </div>
+</section>
+
+<section class="info-container">
+  <div class="row info-container__row flex-between mat-caption">
+    <div class="info-left">
+      <mat-checkbox class="info-confirmation" [checked]="isChecked">
+        By checking this box, I confirm that I have read and acknowledged the
+        <a [routerLink]="['/']">Privacy Notice</a> of Carebox. 
+      </mat-checkbox>
+      <button mat-raised-button color="accent" >Start questionnaire
+        <mat-icon iconPositionEnd>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+
+    <div class="info-right">
+      <p>
+        Please note: Select the Location & Language, on the upper-right of the
+        Carebox Privacy Policy page in the link at left, in accordance with your
+        geography to display the applicable privacy notice.
+      </p>
+      <p>
+        HCP information will only be used for the purposes of being contacted
+        regarding being a potential Investigator in a clinical trial.
+      </p>
+    </div>
+  </div>
+</section>

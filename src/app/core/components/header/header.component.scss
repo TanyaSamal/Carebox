@@ -1,0 +1,53 @@
+@use "sass:map";
+@import  "../../../../styles/constants.scss";
+
+mat-toolbar {
+  height: 87px;
+  background-color: map.get($themeColors, "lightBg");
+
+  @media screen and (max-width: $mq-mobile) {
+    height: 70px;
+    box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.toolbar-row {
+  max-width: $contentWidth;
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (max-width: $mq-laptop) {
+    padding: 0 34px;
+  }
+
+  @media screen and (max-width: $mq-mobile) {
+    padding: 0 4px;
+  }
+
+  .toolbar-icons{
+    gap: 30px;
+
+    @media screen and (max-width: $mq-mobile) {
+      display: none;
+    }
+  }
+
+  .toolbar-group {
+    position: relative;
+
+    .toolbar-group__info {
+      position: absolute;
+      top: -12px;
+      right: -16px;
+      border-radius: 50%;
+      background-color: map.get($themeColors, "buttonBgColor");
+      color: map.get($themeColors, "buttonTextColor");
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+}

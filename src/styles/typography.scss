@@ -1,0 +1,39 @@
+@use '@angular/material' as mat;
+
+$heading-font-family: "'Times New Roman', serif";
+$text-font-family: "'Helvetica Neue', sans-serif";
+
+$carebox-typography: mat.define-typography-config(
+  $font-family: $text-font-family,
+  $headline-1: mat.define-typography-level(42px, $font-family: $heading-font-family),
+  $headline-2: mat.define-typography-level(36px, $font-family: $heading-font-family),
+  $headline-3: mat.define-typography-level(24px, $font-family: $heading-font-family),
+  $headline-4: mat.define-typography-level(16px, $font-family: $heading-font-family),
+  $headline-5: mat.define-typography-level(14px, $font-family: $heading-font-family),
+  $headline-6: mat.define-typography-level(12px, $font-family: $heading-font-family),
+  $subtitle-1: mat.define-typography-level(36px, $font-family: $heading-font-family),
+  $subtitle-2: mat.define-typography-level(24px, $font-family: $heading-font-family),
+  $body-1: mat.define-typography-level(16px),
+  $body-2: mat.define-typography-level(16px, 24px),
+  $caption: mat.define-typography-level(14px, 18px),
+  $button: mat.define-typography-level(23px, $font-family: $heading-font-family),
+  $overline: mat.define-typography-level(23px, $font-family: $heading-font-family),
+);
+
+
+$carebox-mobile-typography: mat.define-typography-config(
+  $font-family: $text-font-family,
+  $headline-1: mat.define-typography-level(26px, $font-family: $heading-font-family),
+  $headline-2: mat.define-typography-level(24px, $font-family: $heading-font-family),
+  $headline-3: mat.define-typography-level(18px, $font-family: $heading-font-family),
+  $headline-4: mat.define-typography-level(16px, $font-family: $heading-font-family),
+  $headline-5: mat.define-typography-level(14px, $font-family: $heading-font-family),
+  $headline-6: mat.define-typography-level(12px, $font-family: $heading-font-family),
+  $subtitle-1: mat.define-typography-level(24px, $font-family: $heading-font-family),
+  $subtitle-2: mat.define-typography-level(18px, $font-family: $heading-font-family),
+  $body-1: mat.define-typography-level(14px),
+  $body-2: mat.define-typography-level(16px, 24px),
+  $caption: mat.define-typography-level(14px, 18px),
+  $button: mat.define-typography-level(23px, $font-family: $heading-font-family),
+  $overline: mat.define-typography-level(23px, $font-family: $heading-font-family),
+);

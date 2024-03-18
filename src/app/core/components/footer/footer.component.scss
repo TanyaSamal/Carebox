@@ -1,0 +1,154 @@
+@use "sass:map";
+@import  "../../../../styles/constants.scss";
+
+.footer-container {
+  background-color: map.get($themeColors, "darkBg");
+  color:  map.get($themeColors, "lightBg");
+
+  .footer-container__row {
+    max-width: $contentWidth;
+    margin: 0 auto;
+    padding: 32px 43px;
+
+    @media screen and (max-width: $mq-laptop) {
+      padding: 32px 50px;
+    }
+  
+    @media screen and (max-width: $mq-mobile) {
+      padding: 28px 42px 26px 40px;
+      flex-direction: column;
+    }
+
+    .footer-column {
+      width: 431px;
+      position: relative;
+      min-height: 148px;
+
+      @media screen and (max-width: $mq-laptop) {
+        width: 30%!important;
+      }
+
+      @media screen and (max-width: $mq-mobile) {
+        width: 100%!important;
+        min-height: auto;
+        order: 3;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: map.get($themeColors, "lineColor");
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @media screen and (max-width: $mq-mobile) {
+          width: 100%;
+          height: 1px;
+          right: unset;
+          top: unset;
+          bottom: 0;
+        }
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      @media screen and (max-width: $mq-mobile) {
+        &:first-child {
+          p {
+            padding: 30px 0 34px;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+
+        &:last-child::after {
+          display: block;
+        }
+      }
+
+      img {
+        margin-bottom: 7px;
+      }
+
+      p {
+        width: 81%;
+      }
+
+      &:nth-child(2) {
+        width: 459px;
+
+        @media screen and (max-width: $mq-mobile) {
+          order: 1;
+          padding-bottom: 17px;
+
+          p {
+            width: 100%;
+          }
+        }
+
+        p {
+          padding-left: 54px;
+
+          @media screen and (max-width: $mq-laptop) {
+            padding-left: 0;
+          }
+        }
+      }
+      
+      &:nth-child(3) {
+        width: calc(100% - 888px);
+
+        @media screen and (max-width: $mq-mobile) {
+          order: 2;
+        }
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        list-style-type: none;
+
+        @media screen and (max-width: $mq-laptop) {
+          padding-left: 0;
+        }
+
+        @media screen and (max-width: $mq-laptop) {
+          margin: 24px 0 27px;
+        }
+
+        li {
+          padding-bottom: 28px;
+
+          &:last-child {
+            padding-bottom: 0;
+            position: relative;
+            grid-area: 3 / 1 / 3 / 3;
+
+            &::after {
+              content: "";
+              display: inline-block;
+              position: relative;
+              left: 10px;
+              background-image: url('../../../../assets/icon-privacy.svg');
+              background-repeat: no-repeat;
+              width: 30px;
+              height: 14px;
+            }
+          }
+
+          a {
+            color: map.get($themeColors, "lightBg");
+          }
+        }
+      }
+    }
+  }
+}
